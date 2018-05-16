@@ -4,16 +4,26 @@ require_once '../vendor/autoload.php';
 
 $groupsApi = (new \MailerLiteApi\MailerLite(API_KEY))->groups();
 
+//$subscriber = [
+//    'email' => $_GET['email'],
+//    'fields' => [
+//        'name' => $_GET['name'],
+//        'last_name' => $_GET['last_name'],
+//        'company' => $_GET['company'],
+//    ]
+//];
+
 $subscriber = [
-    'email' => $_GET['email'],
+    'email' => 'john@example.com',
     'fields' => [
-        'name' => $_GET['name'],
-        'last_name' => $_GET['last_name'],
-        'company' => $_GET['company'],
+        'name' => 'John',
+        'last_name' => 'Doe',
+        'company' => 'John Doe Co.'
     ]
 ];
 
 var_dump($subscriber);
+exit;
 
 $response = $groupsApi->addSubscriber(GROUP_ID, $subscriber);
 
