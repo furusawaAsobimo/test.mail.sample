@@ -22,9 +22,6 @@ $subscriber = [
     ]
 ];
 
-var_dump($subscriber);
-exit;
-
 $response = $groupsApi->addSubscriber(GROUP_ID, $subscriber);
 
 echo $response;
