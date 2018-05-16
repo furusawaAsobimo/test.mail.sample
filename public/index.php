@@ -2,7 +2,7 @@
 // Composerオートローダを読み込む
 require_once '../vendor/autoload.php';
 
-$groupsApi = (new \MailerLiteApi\MailerLite(API_KET))->groups();
+$groupsApi = (new \MailerLiteApi\MailerLite(API_KEY))->groups();
 
 $groups = $groupsApi->get(); // returns array of groups
 
