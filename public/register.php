@@ -13,6 +13,8 @@ $subscriber = [
     ]
 ];
 
+var_dump($subscriber);
+
 $response = $groupsApi->addSubscriber(GROUP_ID, $subscriber);
 
 echo $response;
